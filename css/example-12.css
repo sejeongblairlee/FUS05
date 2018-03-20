@@ -39,6 +39,7 @@ body{
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 1em; */
+    min-height: 500px;
 
 }
 .ad-content{
@@ -56,8 +57,66 @@ body{
     background-color: #181818;
     color: #fff;
 }
-/* 모바일 디바이스 */
-@media screen and (max-width: 999px){
+/* 모바일 스몰 디바이스 */
+@media screen and (min-width: 1px) and (max-width: 550px){
+    /* 모바일 스몰 로고 */
+    .logo{
+        background-color: yellow;
+        width: 35%;
+        margin-left: 2em;
+    }
+    /* 모바일 스몰 메뉴 */
+    .btn-wrapper{
+        background: aqua;
+        position: fixed;
+        top: 0.5em;
+        right: 1em;
+        width: 40px;
+        height: 40px;
+    }
+    .btn-menubar{
+        display: none;
+    }
+    .menubar{
+        position: absolute;
+        left: 0;
+        background: #181818;
+        border-radius: 10px;
+        width: 100%;
+        height: 25%;
+    }
+    .menubar-top{
+        top: 0;
+    }
+    .menubar-middle{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .menubar-bottom{
+        top: 100%;
+        transform: translateY(-100%);
+        /* #메뉴바 맨아래 바 위치조절하는 선언 */
+    }
+    .menu{
+        background-color: rgba(0, 0, 0, 0.95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100vh;
+        z-index: 10;
+        color: #fff;
+        padding: 3em 0 0 2em;
+        transform: translateX(-100%);
+    }
+    .menu-act{
+        transform: translateX(0);
+    }
+}
+
+
+/* 모바일 라지 디바이스 */
+@media screen and (min-width: 551px) and (max-width: 999px){
     /* 모바일 로고 */
     .logo{
         width: 50%;
@@ -108,9 +167,6 @@ body{
     }
     .menu li:first-child a::before{
         content: "";
-    }
-    .ad{
-        height: 50vh;
     }
     .main{
         height: 50vh;
